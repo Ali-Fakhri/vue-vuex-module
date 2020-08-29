@@ -1,11 +1,20 @@
 <template>
   <div>
-    <h3>Content Will Be Here</h3>
+    <CounterResult />
+    <Manipluate />
   </div>
 </template>
 
 <script>
-export default {};
+import CounterResult from "../components/CounterResult";
+import Manipluate from "../components/Manipluate";
+
+export default {
+  components: {
+    CounterResult,
+    Manipluate,
+  },
+};
 </script>
 
 <style>

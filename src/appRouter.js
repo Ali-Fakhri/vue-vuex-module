@@ -6,7 +6,8 @@ Vue.use(VueRouter);
 const router = new VueRouter({
     routes: [
         { path: '/', component: () => import('./views/HomePage.vue') }
-    ]
+    ],
+    mode: 'history'
 });
 
 export default router;

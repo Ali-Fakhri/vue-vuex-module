@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="text-center text-primary">VUEX - Header Will Be Here</h2>
+    <AppHeader />
     <router-view />
   </div>
 </template>
@@ -9,9 +9,13 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
+import AppHeader from "./components/AppHeader";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    AppHeader,
+  },
 };
 </script>
 <style>
