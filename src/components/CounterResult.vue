@@ -1,17 +1,19 @@
 <template>
   <div class="container-fluid">
     <div class="row py-5">
-      <div class="col-sm-6 offset-sm-3 text-center customizied">{ {{counter}} }</div>
+      <div class="col-sm-6 offset-sm-3 text-center customizied">{ {{exactCount}} }</div>
+      <div class="col-sm-6 offset-sm-3 text-center">The Double: {{ doubleCount }}</div>
+      <div class="col-sm-6 offset-sm-3 text-center">{{ oddOrEven }}</div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   computed: {
-    counter() {
-      return this.$store.state.count;
-    },
+    ...mapGetters(["exactCount", "doubleCount", "oddOrEven"]),
   },
 };
 </script>
